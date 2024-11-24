@@ -1233,6 +1233,20 @@ local SectionPar = Com:NewSection({
         Description = "Toggles Autospam when near player(Optional)", -- Description of the toggle | string, optional 
         CurrentState = false, -- default state of the toggle | bool, optional
         Callback = function(state) -- code executed on interaction with the element | function,  optional
+		           if state then
+            ManualSpam()
+            else 
+            ManualSpam()
+            end
+        end,
+    })
+
+
+    local Toggle = SectionPar:NewToggle({
+        Name = "Mnual Spam", -- Name of the toggle | string, required
+        Description = "GOD SPAM", -- Description of the toggle | string, optional 
+        CurrentState = false, -- default state of the toggle | bool, optional
+        Callback = function(state) -- code executed on interaction with the element | function,  optional
         auto_spam = state
         end,
     })
